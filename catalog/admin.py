@@ -21,17 +21,11 @@ class ProductAdmin(admin.ModelAdmin):
 
     def promo_price(self, obj):
         return obj.get_price()
-        products = Product.objects.all()
-        res = []
-        data = {}
-        for product in products:
-            res.append({"promo price": product.get_price()})
-        return res
+
 
     def image_preview(self, obj):
         return obj.image_preview()
 
-    image_preview.allow_tags = True
 
 
 @admin.register(Cart)

@@ -4,7 +4,7 @@ from django.utils.html import mark_safe, format_html
 
 # Create your models here.
 
-
+# менеджер, возвращающий товары с лучшей ценой в своей категории
 class ProductManager(models.Manager):
     def get_queryset(self):
         pk_list = list()
